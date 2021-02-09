@@ -1,11 +1,14 @@
-## Hello World for P5.js
+## Code Self Portrait for P5.js
 #### by Alex Kowalczuk
-January 28th, 2021
+February 11th, 2021
 
 
 ### Overview
-Simple Hello World text in black box.
+This is a a project to re-create self portrait in P5.js
+This is for Interactive Design Class at USFCA. 
 
 ### Technical Details
 
-Modify the sketch.js setup() and draw() are used only.
+Main code is in sketch.js
+That file includes many function that are responsible for different parts of portrait. 
+It is just code, there is no drawing in Illustrator or scanning in images.
