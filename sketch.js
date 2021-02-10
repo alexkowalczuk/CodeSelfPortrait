@@ -12,9 +12,9 @@ function setup() {
 function draw() {
   background(255, 255, 230); //color of the background
   face();
-  //hair();
-  neck();
   ears();
+  hair();
+  neck();
   nose();
   eyebrows();
   mouth();
@@ -38,6 +38,7 @@ function neck() {
 }
 
 function ears() {
+  //noStroke()
   fill(247, 221, 212);
   ellipse(232, 335, 40, 70);
   ellipse(488, 335, 40, 70);
@@ -45,7 +46,7 @@ function ears() {
 
 function nose() {
   fill(247, 221, 155);
-  triangle(360, 330, 340, 380, 380, 380);
+  triangle(360, 320, 340, 380, 380, 380);
 }
 
 function eyes() {
@@ -77,9 +78,14 @@ function eyebrows() {
 }
 
 function hair() {
-  noStroke()
+  //noStroke()
   fill(32, 19, 19);
-  arc(260, 260, 300, 380, QUARTER_PI + HALF_PI, QUARTER_PI, OPEN);
+  arc(360, 300, 250, 270, PI+.3, -.3, PI); //main half circle for hair
+  quad(240, 260, 214, 329, 250, 297, 300, 248); //left side hair on the ear
+  quad(480, 261, 501, 332, 479, 308, 450, 260); //right side hair on the ear
+  quad(472, 250, 500, 305, 480, 297, 442, 255); //^
+  triangle(235, 280, 230, 252, 265, 215); //right side bump
+  triangle(473, 246, 490, 272, 489, 295); // left side bump
 }
 
 function mouth() {
@@ -94,6 +100,9 @@ function mouth() {
 function shirt() {
   fill(115, 194, 251)
   rect(255, 561, 205, 240, 20);
+  fill("pink")
+  quad(300, 730, 420, 730, 440, 783, 280, 783);
+  //text("Alex");
 }
 
 function drawDebugInfo() {
