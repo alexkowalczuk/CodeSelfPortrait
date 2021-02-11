@@ -1,8 +1,9 @@
+// Global variable needed for position x and y
 var gDebugMode = true;
 
 // Setup code goes here
 function setup() {
-  createCanvas(1200, 800);
+  createCanvas(1200, 800); //size of the canvas
   textSize(40); //font size of our text
   textAlign(CENTER); //align of the text
  }
@@ -10,7 +11,7 @@ function setup() {
 
 // Draw code goes here
 function draw() {
-  background(255, 255, 230); //color of the background
+  background(255, 255, 230);
   face();
   ears();
   hair();
@@ -21,6 +22,7 @@ function draw() {
   eyes();
   shirt();
 
+  // if statement for our x & y position 
   if( gDebugMode == true ) {
   	drawDebugInfo();
   }
@@ -50,6 +52,7 @@ function nose() {
 }
 
 function eyes() {
+  //Outside (white parts)
   stroke(21, 19, 19);
   strokeWeight(3)
   fill(255);
@@ -74,7 +77,6 @@ function eyebrows() {
   noFill();
   arc(300, 300, 55, 18, PI, TWO_PI, OPEN);
   arc(420, 300, 55, 18, PI, TWO_PI, OPEN);
-
 }
 
 function hair() {
@@ -84,28 +86,34 @@ function hair() {
   quad(240, 260, 214, 329, 250, 297, 300, 248); //left side hair on the ear
   quad(480, 261, 501, 332, 479, 308, 450, 260); //right side hair on the ear
   quad(472, 250, 500, 305, 480, 297, 442, 255); //^
-  triangle(235, 280, 230, 252, 265, 215); //right side bump
-  triangle(473, 246, 490, 272, 489, 295); // left side bump
+  triangle(235, 280, 230, 252, 265, 215); //left side bump
+  triangle(473, 246, 490, 272, 489, 295); // right side bump
+  triangle(452, 216, 480, 230, 478, 262);
+  triangle(424, 191, 456, 203, 459, 239);
 }
 
 function mouth() {
-   //r = r + .1
-   //rotate(r)
-   //translate(-width/2, -height/2);
    noStroke()
    fill(255, 102, 102);
    arc(360, 425, 90, 45, 0, PI);
 }
 
+//rect(322, 500, 70, 75, 20);
+
 function shirt() {
   fill(115, 194, 251)
   rect(255, 561, 205, 240, 20);
+  fill(247, 221, 212);
+  triangle(322, 560, 357, 587, 392, 560);
+
+  //pocket
   fill("pink")
-  quad(300, 730, 420, 730, 440, 783, 280, 783);
-  //text("Alex");
+  quad(300, 730, 415, 730, 435, 783, 280, 783);
+
 }
 
+/* x & y position printer
 function drawDebugInfo() {
 	fill(0);
   	text("X: " + mouseX + "   Y: " + mouseY, 400, height - 20);
-}
+}*/
