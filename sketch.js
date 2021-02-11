@@ -22,6 +22,10 @@ function draw() {
   eyes();
   shirt();
 
+  textSize(40);
+  fill('pink');
+  text('Alex Kowalczuk Self Portrait', 300, 50);
+
   // if statement for our x & y position 
   if( gDebugMode == true ) {
   	drawDebugInfo();
