@@ -1,3 +1,5 @@
+/* Alex Kowalczuk Self Portrait in P5.js */
+
 // Global variable needed for position x and y
 var gDebugMode = true;
 
@@ -9,7 +11,7 @@ function setup() {
  }
 
 
-// Draw code goes here
+// Draw code - calling all of the functions / portrait parts
 function draw() {
   background(255, 255, 230);
   face();
@@ -32,29 +34,33 @@ function draw() {
   }
 }
 
+// function that create face shape
 function face() {
   noStroke()
   fill(247, 221, 212);
   ellipse(360, 355, 245, 320);
 }
 
+// function that create neck shape
 function neck() {
   fill(247, 221, 212)
   rect(322, 500, 70, 75, 20);
 }
 
+// function that create ears
 function ears() {
-  //noStroke()
   fill(247, 221, 212);
   ellipse(232, 335, 40, 70);
   ellipse(488, 335, 40, 70);
 }
 
+// function that create nose shape
 function nose() {
   fill(247, 221, 155);
   triangle(360, 320, 340, 380, 380, 380);
 }
 
+// function that create eyes
 function eyes() {
   //Outside (white parts)
   stroke(21, 19, 19);
@@ -75,6 +81,7 @@ function eyes() {
   ellipse(425, 315, 8, 8);
 }
 
+// function that create eyebrows shape
 function eyebrows() {
   stroke(21, 19, 19);
   strokeWeight(7);
@@ -83,6 +90,7 @@ function eyebrows() {
   arc(420, 300, 55, 18, PI, TWO_PI, OPEN);
 }
 
+// function that create hair style
 function hair() {
   //noStroke()
   fill(32, 19, 19);
@@ -96,14 +104,14 @@ function hair() {
   triangle(424, 191, 456, 203, 459, 239);
 }
 
+// function that create mouth shape
 function mouth() {
    noStroke()
    fill(255, 102, 102);
    arc(360, 425, 90, 45, 0, PI);
 }
 
-//rect(322, 500, 70, 75, 20);
-
+// function that create shirt/hoodie shape
 function shirt() {
   fill(115, 194, 251)
   rect(255, 561, 205, 240, 20);
@@ -116,6 +124,7 @@ function shirt() {
 
 }
 
+// function that prints x & y position
 /* x & y position printer
 function drawDebugInfo() {
 	fill(0);
